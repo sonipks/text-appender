@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.pks.textappender.controller.AppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+<!--    Main Content-->
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+        <TextArea fx:id="inputArea" prefWidth="210" prefHeight="210"/>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+        <Button onAction="#clearInputButtonClick" text="Clear"/>
+        <Button onAction="#trimSpaceInputButtonClick" text="Trim Input"/>
+        <Button onAction="#singleQuoteButtonClick" text="'"/>
+        <Button onAction="#doubleQuoteButtonClick" text="''"/>
+        <Button onAction="#noQuoteButtonClick" text="NO '"/>
+        <Button onAction="#prefixSuffixButtonClick" text="Prefix/Suffix"/>
+        <Button onAction="#moveOutputToInputButtonClick" text="O/P->I/P"/>
+    </HBox>
+
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+        <Label text="Prefix"/>
+        <TextField fx:id="prefixField"/>
+        <Label text="Suffix"/>
+        <TextField fx:id="suffixField"/>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+        <TextArea fx:id="outputArea" prefWidth="210" prefHeight="210"/>
+    </HBox>
+
+
+</VBox>
